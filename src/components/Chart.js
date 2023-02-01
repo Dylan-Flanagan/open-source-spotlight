@@ -5,6 +5,8 @@ import { XAxis, YAxis, Tooltip, Bar, BarChart } from 'recharts';
 const data = [
   { type: 'Dog', dislike: 1000, like: 10000, ind: 5000 },
   { type: 'Cat', dislike: 3000, like: 4000, ind: 7000 },
+  { type: 'Fish', dislike: 200, like: 500, ind: 10000 },
+  { type: 'Reptile', dislike: 10000, like: 200, ind: 50 },
   { type: 'Child', dislike: 10000, like: 100, ind: 50 },
 ];
 export default function PetChart() {
