@@ -1,6 +1,7 @@
 import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
-import ColorChart from './components/Chart.js';
+import PetChart from './components/Chart.js';
+import DdosTable from './components/Table.js';
 
 function App() {
   return (
@@ -11,11 +12,12 @@ function App() {
       </nav>
       <Switch>
         <Route path="/table">
-          <h1>Table Library</h1>
+          <h1>People I Have DDos&lsquo;d</h1>
+          <DdosTable />
         </Route>
         <Route path="/charts">
-          <h1>Chart Library</h1>
-          <ColorChart />
+          <h1>A National Poll on Favorite Pet Types</h1>
+          <PetChart />
         </Route>
       </Switch>
     </div>

@@ -3,18 +3,18 @@ import { useState } from 'react';
 import { XAxis, YAxis, Tooltip, Bar, BarChart } from 'recharts';
 
 const data = [
-  { type: 'Dog', dislike: 400, like: 2400, ind: 5000 },
-  { type: 'Cat', dislike: 300, like: 1200, ind: 7000 },
-  { type: 'Child', dislike: 600, like: 2400, ind: 8400 },
+  { type: 'Dog', dislike: 1000, like: 10000, ind: 5000 },
+  { type: 'Cat', dislike: 3000, like: 4000, ind: 7000 },
+  { type: 'Child', dislike: 10000, like: 100, ind: 50 },
 ];
-export default function ColorChart() {
-  const [dataKey, setDataKey] = useState('pv');
+export default function PetChart() {
+  const [dataKey, setDataKey] = useState('like');
   return (
     <>
       <FormControl fullWidth>
         <InputLabel id="select-label">Data Key</InputLabel>
         <Select
-          labelId="select-label"
+          labelId="select-label-id"
           id="select"
           value={dataKey}
           label="Data Key"
@@ -27,7 +27,7 @@ export default function ColorChart() {
       </FormControl>
 
       <BarChart width={800} height={600} data={data}>
-        <Bar dataKey={dataKey} fill="#886678" />
+        <Bar dataKey={dataKey} fill="#886672" />
         <XAxis dataKey="type" />
         <YAxis />
         <Tooltip />
